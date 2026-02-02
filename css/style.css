@@ -1,0 +1,33 @@
+/* Colores corporativos de Lavandi */
+:root {
+    --azul-lavandi: #0056b3;
+    --amarillo-lavandi: #ffc107;
+}
+
+/* Efecto en las tarjetas al pasar el ratón */
+.card {
+    transition: transform 0.3s ease, shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* Estilo para las imágenes de los servicios */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Personalización del botón Hero */
+.btn-warning {
+    background-color: var(--amarillo-lavandi);
+    border: none;
+    color: #333;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
