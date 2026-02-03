@@ -14,6 +14,26 @@
         </div>
     </div>
 
+    <section class="seccion-especial">
+        <div class="caja-pack">
+            <div class="info-pack">
+                <h2 class="titulo-pack">🌟 Pack Especial Alfombras</h2>
+                <p>Limpieza profunda con tratamiento anti-ácaros y secado controlado para evitar humedad. ¡Tu alfombra como nueva!</p>
+                <ul class="lista-ventajas">
+                    <li>Recogida y entrega gratuita en Alcobendas.</li>
+                    <li>Tratamiento de manchas difíciles incluido.</li>
+                    <li>Desinfección total y aroma fresco.</li>
+                </ul>
+            </div>
+            <div class="precio-pack">
+                <span class="desde">Desde</span>
+                <span class="monto">25€</span>
+                <p class="unidad">por unidad</p>
+                <a href="contactos.php" class="boton-accion">Reservar Pack</a>
+            </div>
+        </div>
+    </section>
+
     <h2 class="subtitulo">Lista de Precios Detallada</h2>
     
     <div class="borde-tabla">
@@ -35,6 +55,11 @@
                     <td class="negrita">Edredones</td>
                     <td>Lavado especial para piezas voluminosas.</td>
                     <td class="centrar-texto">15,50 €</td>
+                </tr>
+                <tr>
+                    <td class="negrita">Trajes</td>
+                    <td>Limpieza en seco y planchado a vapor.</td>
+                    <td class="centrar-texto">12,00 €</td>
                 </tr>
             </tbody>
         </table>
