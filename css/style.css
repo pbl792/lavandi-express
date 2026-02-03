@@ -1,4 +1,4 @@
-/* --- 1. VARIABLES Y GENERALES --- */
+/* --- 1. VARIABLES --- */
 :root {
     --azul-lavandi: #0056b3;
     --azul-oscuro: #0b1146;
@@ -7,93 +7,87 @@
     --blanco: #ffffff;
 }
 
+/* --- 2. GENERALES --- */
 body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; }
-.contenedor-web { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.titulo-centrado { text-align: center; margin-bottom: 40px; font-weight: bold; font-size: 2rem; }
+.contenedor-web, .contenedor { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.titulo-centrado { text-align: center; margin-bottom: 40px; font-weight: bold; font-size: 2.5rem; }
 .color-azul { color: var(--azul-lavandi); }
+.centrar-texto { text-align: center; }
 
-/* --- 2. PÁGINA DE INICIO (ESTILO MODERNO) --- */
-
-/* Portada Principal */
+/* --- 3. PORTADA (INDEX) --- */
 .portada-principal {
     background: url('../img/hero-lavanderia.png') no-repeat center center;
     background-size: cover;
-    height: 80vh;
+    height: 85vh;
     display: flex;
 }
 
 .capa-oscura-portada {
-    background: linear-gradient(to right, rgba(11, 17, 70, 0.85), rgba(11, 17, 70, 0.3));
+    background: rgba(11, 17, 70, 0.65); /* Capa más oscura para que resalte el texto */
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.caja-texto-portada {
-    max-width: 700px;
-    padding: 50px;
-    color: var(--blanco);
-}
-
-.nota-superior { background: var(--amarillo-lavandi); color: #333; padding: 6px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+.caja-texto-portada { max-width: 700px; padding: 50px; color: var(--blanco); }
 .titulo-enorme { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
 .resaltado-amarillo { color: var(--amarillo-lavandi); }
 
-/* Botones Portada */
+/* Botones */
 .grupo-botones { display: flex; gap: 15px; margin-top: 30px; }
-.boton-azul-relleno { background: var(--azul-lavandi); color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-.boton-blanco-borde { background: white; color: var(--azul-lavandi); padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-.boton-azul-relleno:hover { background: #004494; }
+.boton-azul-relleno, .boton-accion { 
+    background: var(--azul-lavandi); color: white; padding: 14px 30px; 
+    border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; 
+    border: none; display: inline-block; cursor: pointer;
+}
+.boton-blanco-borde { 
+    background: white; color: var(--azul-lavandi); padding: 14px 30px; 
+    border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; 
+}
+.boton-azul-relleno:hover { background: #004494; transform: translateY(-2px); }
 .boton-blanco-borde:hover { background: var(--amarillo-lavandi); color: #333; }
 
-/* Ventajas (Iconos) */
+/* Ventajas e Iconos */
 .seccion-ventajas { padding: 80px 0; }
-.lista-ventajas { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; }
-.bloque-ventaja { flex: 1; min-width: 250px; padding: 20px; }
+.lista-ventajas { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; list-style: none; padding: 0; }
 .circulo-icono { 
     width: 80px; height: 80px; background: #eef6ff; color: var(--azul-lavandi); 
     border-radius: 50%; display: flex; align-items: center; justify-content: center; 
-    font-size: 2rem; margin: 0 auto 20px; 
+    font-size: 2.5rem; margin: 0 auto 20px; 
 }
 
-/* Rejilla de Servicios (Home) */
-.seccion-gris-claro { background: #f4f7f6; padding: 80px 0; }
+/* Rejilla Servicios */
+.seccion-gris-claro { background: var(--fondo-gris); padding: 80px 0; }
 .rejilla-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.tarjeta-servicio { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.4s; border: 1px solid #eee; }
-.tarjeta-servicio:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-.borde-especial { border: 2px solid var(--amarillo-lavandi); }
-
+.tarjeta-servicio { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 .contenedor-foto img { width: 100%; height: 230px; object-fit: cover; }
 .detalles-servicio { padding: 25px; text-align: center; }
-.link-mas-info { color: var(--azul-lavandi); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
 
-/* --- 3. PÁGINA DE SERVICIOS (PACK ALFOMBRAS Y TABLAS) --- */
-.fila-doble { display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
-.caja-gris { background: var(--fondo-gris); padding: 25px; border-radius: 12px; flex: 1; min-width: 280px; }
-.seccion-especial { margin: 60px 0; }
-
+/* --- 4. SERVICIOS Y PACKS --- */
+.fila-doble { display: flex; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
+.caja-gris { background: var(--fondo-gris); padding: 30px; border-radius: 15px; flex: 1; min-width: 280px; }
 .caja-pack {
-    display: flex; gap: 30px; flex-wrap: wrap; align-items: center; padding: 40px;
+    display: flex; gap: 40px; flex-wrap: wrap; align-items: center; padding: 40px;
     background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
     border: 2px solid var(--azul-lavandi); border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-
-.info-pack { flex: 2; min-width: 300px; }
-.titulo-pack { color: var(--azul-lavandi); margin-bottom: 15px; font-size: 1.8rem; }
-.precio-pack {
-    flex: 1; min-width: 220px; background: var(--azul-lavandi); color: white;
-    padding: 35px; border-radius: 20px; text-align: center;
+.precio-pack { 
+    background: var(--azul-lavandi); color: white; padding: 40px; 
+    border-radius: 20px; text-align: center; flex: 1; min-width: 220px;
 }
-.monto { display: block; font-size: 3.5rem; font-weight: bold; color: var(--amarillo-lavandi); line-height: 1; }
-
-.boton-accion {
-    display: inline-block; padding: 12px 25px; background: white; color: var(--azul-lavandi);
-    text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 20px;
-}
+.monto { display: block; font-size: 3.5rem; font-weight: bold; color: var(--amarillo-lavandi); }
 
 /* Tablas */
-.borde-tabla { overflow-x: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-top: 20px; }
+.borde-tabla { overflow-x: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 30px 0 60px; }
 .tabla-estilo-lavandi { width: 100%; border-collapse: collapse; background: white; }
 .tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
-.tabla-estilo-lavandi td { border-bottom: 1px solid #eee; padding: 18px; }
+.tabla-estilo-lavandi td { padding: 18px; border-bottom: 1px solid #eee; }
+
+/* --- 5. CONTACTO --- */
+.centrar-todo { text-align: center; padding: 100px 0; }
+.titulo-gigante { font-size: 3.5rem; margin-bottom: 10px; }
+.texto-destacado { font-size: 1.3rem; color: #666; margin-bottom: 40px; }
+.alerta-informativa {
+    background: #e3f2fd; color: #0056b3; padding: 25px 50px;
+    border-radius: 50px; display: inline-block; font-weight: bold;
+}
