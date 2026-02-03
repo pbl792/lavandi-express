@@ -1,13 +1,15 @@
 /* --- 1. VARIABLES --- */
+/* Definición de colores globales para mantener la consistencia de marca */
 :root {
-    --azul-lavandi: #0056b3;
-    --azul-oscuro: #0b1146;
-    --amarillo-lavandi: #ffc107;
-    --fondo-gris: #f8f9fa;
+    --azul-lavandi: #0056b3;      /* Azul principal de los botones y acentos */
+    --azul-oscuro: #0b1146;       /* Tono para textos profundos o fondos oscuros */
+    --amarillo-lavandi: #ffc107;   /* Color de contraste para resaltar elementos clave */
+    --fondo-gris: #f8f9fa;        /* Color de fondo para secciones secundarias */
     --blanco: #ffffff;
 }
 
 /* --- 2. GENERALES --- */
+/* Estilos base para el cuerpo de la web y contenedores de alineación */
 body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; }
 .contenedor-web, .contenedor { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .titulo-centrado { text-align: center; margin-bottom: 40px; font-weight: bold; font-size: 2.5rem; }
@@ -15,28 +17,28 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 .centrar-texto { text-align: center; }
 
 /* --- 3. PORTADA (INDEX) --- */
-
+/* Sección principal con imagen de fondo y filtro de transparencia */
 .portada-principal {
-    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
-                url('../img/hero-lavanderia.png') no-repeat center;
-    height: 35vh;
+    /* El linear-gradient aplica un velo blanco semitransparente sobre la imagen de fondo */
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('../img/hero-lavanderia.png') no-repeat center;
+    height: 35vh; /* Altura de la sección de portada tipo banner */
     display: flex;
 }
-.caja-texto-portada { 
-    color: var(--azul-oscuro); 
-}
+
+/* Capa superpuesta para control de alineación y tono oscuro opcional */
 .capa-oscura-portada {
-    background: rgba(59, 63, 99, 0.65); /* Capa más oscura para que resalte el texto */
+    background: rgba(11, 17, 70, 0.65); /* Filtro oscuro para mejorar contraste del texto blanco */
     width: 100%;
     display: flex;
     align-items: center;
 }
 
+/* Contenedor del texto dentro del Hero */
 .caja-texto-portada { max-width: 700px; padding: 50px; color: var(--blanco); }
 .titulo-enorme { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
 .resaltado-amarillo { color: var(--amarillo-lavandi); }
 
-/* Botones */
+/* Estilos para los botones de llamada a la acción */
 .grupo-botones { display: flex; gap: 15px; margin-top: 30px; }
 .boton-azul-relleno, .boton-accion { 
     background: var(--azul-lavandi); color: white; padding: 14px 30px; 
@@ -47,10 +49,11 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
     background: white; color: var(--azul-lavandi); padding: 14px 30px; 
     border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; 
 }
+/* Efectos de interacción al pasar el ratón */
 .boton-azul-relleno:hover { background: #004494; transform: translateY(-2px); }
 .boton-blanco-borde:hover { background: var(--amarillo-lavandi); color: #333; }
 
-/* Ventajas e Iconos */
+/* Sección de ventajas competitivas con iconos */
 .seccion-ventajas { padding: 80px 0; }
 .lista-ventajas { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; list-style: none; padding: 0; }
 .circulo-icono { 
@@ -59,7 +62,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
     font-size: 2.5rem; margin: 0 auto 20px; 
 }
 
-/* Rejilla Servicios */
+/* Configuración de la rejilla de servicios con tarjetas interactivas */
 .seccion-gris-claro { background: var(--fondo-gris); padding: 80px 0; }
 .rejilla-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .tarjeta-servicio { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -67,6 +70,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 .detalles-servicio { padding: 25px; text-align: center; }
 
 /* --- 4. SERVICIOS Y PACKS --- */
+/* Layout y diseño específico para la página de servicios y ofertas especiales */
 .fila-doble { display: flex; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
 .caja-gris { background: var(--fondo-gris); padding: 30px; border-radius: 15px; flex: 1; min-width: 280px; }
 .caja-pack {
@@ -80,13 +84,14 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 }
 .monto { display: block; font-size: 3.5rem; font-weight: bold; color: var(--amarillo-lavandi); }
 
-/* Tablas */
+/* Estilos de las tablas de precios detalladas */
 .borde-tabla { overflow-x: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 30px 0 60px; }
 .tabla-estilo-lavandi { width: 100%; border-collapse: collapse; background: white; }
 .tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
 .tabla-estilo-lavandi td { padding: 18px; border-bottom: 1px solid #eee; }
 
 /* --- 5. CONTACTO --- */
+/* Estilos para la página de contacto y mensajes de aviso */
 .centrar-todo { text-align: center; padding: 100px 0; }
 .titulo-gigante { font-size: 3.5rem; margin-bottom: 10px; }
 .texto-destacado { font-size: 1.3rem; color: #666; margin-bottom: 40px; }
