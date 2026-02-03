@@ -15,15 +15,18 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 .centrar-texto { text-align: center; }
 
 /* --- 3. PORTADA (INDEX) --- */
+
 .portada-principal {
-    background: url('../img/hero-lavanderia.png') no-repeat center center;
-    background-size: cover;
-    height: 85vh;
+    background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), 
+                url('../img/hero-lavanderia.png') no-repeat center;
+    height: 35vh;
     display: flex;
 }
-
+.caja-texto-portada { 
+    color: var(--azul-oscuro); 
+}
 .capa-oscura-portada {
-    background: rgba(11, 17, 70, 0.65); /* Capa más oscura para que resalte el texto */
+    background: rgba(59, 63, 99, 0.65); /* Capa más oscura para que resalte el texto */
     width: 100%;
     display: flex;
     align-items: center;
