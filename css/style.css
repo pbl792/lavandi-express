@@ -1,74 +1,99 @@
-/* --- TUS COLORES --- */
+/* --- 1. VARIABLES Y GENERALES --- */
 :root {
     --azul-lavandi: #0056b3;
+    --azul-oscuro: #0b1146;
     --amarillo-lavandi: #ffc107;
     --fondo-gris: #f8f9fa;
+    --blanco: #ffffff;
 }
 
-/* --- ESTILOS GENERALES --- */
-body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; }
-.contenedor { max-width: 1100px; margin: 40px auto; padding: 20px; }
-.titulo-centrado { text-align: center; margin-bottom: 30px; font-weight: bold; }
-.subtitulo { margin-top: 40px; color: #333; }
+body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+.contenedor-web { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.titulo-centrado { text-align: center; margin-bottom: 40px; font-weight: bold; font-size: 2rem; }
 .color-azul { color: var(--azul-lavandi); }
-.negrita { font-weight: bold; }
-.centrar-texto { text-align: center; }
 
-/* --- BLOQUES SUPERIORES --- */
+/* --- 2. PÁGINA DE INICIO (ESTILO MODERNO) --- */
+
+/* Portada Principal */
+.portada-principal {
+    background: url('../img/hero-lavanderia.png') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+}
+
+.capa-oscura-portada {
+    background: linear-gradient(to right, rgba(11, 17, 70, 0.85), rgba(11, 17, 70, 0.3));
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.caja-texto-portada {
+    max-width: 700px;
+    padding: 50px;
+    color: var(--blanco);
+}
+
+.nota-superior { background: var(--amarillo-lavandi); color: #333; padding: 6px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+.titulo-enorme { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
+.resaltado-amarillo { color: var(--amarillo-lavandi); }
+
+/* Botones Portada */
+.grupo-botones { display: flex; gap: 15px; margin-top: 30px; }
+.boton-azul-relleno { background: var(--azul-lavandi); color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.boton-blanco-borde { background: white; color: var(--azul-lavandi); padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.boton-azul-relleno:hover { background: #004494; }
+.boton-blanco-borde:hover { background: var(--amarillo-lavandi); color: #333; }
+
+/* Ventajas (Iconos) */
+.seccion-ventajas { padding: 80px 0; }
+.lista-ventajas { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; }
+.bloque-ventaja { flex: 1; min-width: 250px; padding: 20px; }
+.circulo-icono { 
+    width: 80px; height: 80px; background: #eef6ff; color: var(--azul-lavandi); 
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+    font-size: 2rem; margin: 0 auto 20px; 
+}
+
+/* Rejilla de Servicios (Home) */
+.seccion-gris-claro { background: #f4f7f6; padding: 80px 0; }
+.rejilla-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.tarjeta-servicio { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.4s; border: 1px solid #eee; }
+.tarjeta-servicio:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+.borde-especial { border: 2px solid var(--amarillo-lavandi); }
+
+.contenedor-foto img { width: 100%; height: 230px; object-fit: cover; }
+.detalles-servicio { padding: 25px; text-align: center; }
+.link-mas-info { color: var(--azul-lavandi); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+
+/* --- 3. PÁGINA DE SERVICIOS (PACK ALFOMBRAS Y TABLAS) --- */
 .fila-doble { display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
-.caja-gris { background: var(--fondo-gris); padding: 20px; border-radius: 10px; flex: 1; min-width: 280px; }
-.nombre-servicio { color: var(--azul-lavandi); margin-top: 0; }
-
-/* --- SECCIÓN ESPECIAL: PACK ALFOMBRAS --- */
+.caja-gris { background: var(--fondo-gris); padding: 25px; border-radius: 12px; flex: 1; min-width: 280px; }
 .seccion-especial { margin: 60px 0; }
 
 .caja-pack {
-    display: flex;
+    display: flex; gap: 30px; flex-wrap: wrap; align-items: center; padding: 40px;
     background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
-    border: 2px solid var(--azul-lavandi);
-    border-radius: 20px;
-    padding: 30px;
-    align-items: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    border: 2px solid var(--azul-lavandi); border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .info-pack { flex: 2; min-width: 300px; }
-.titulo-pack { color: var(--azul-lavandi); margin-bottom: 15px; }
-
-.lista-ventajas { list-style: none; padding: 0; }
-.lista-ventajas li { margin-bottom: 10px; font-weight: 500; }
-.lista-ventajas li::before { content: "✅ "; }
-
+.titulo-pack { color: var(--azul-lavandi); margin-bottom: 15px; font-size: 1.8rem; }
 .precio-pack {
-    flex: 1;
-    min-width: 200px;
-    background: var(--azul-lavandi);
-    color: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
+    flex: 1; min-width: 220px; background: var(--azul-lavandi); color: white;
+    padding: 35px; border-radius: 20px; text-align: center;
 }
-
-.monto { display: block; font-size: 3rem; font-weight: bold; color: var(--amarillo-lavandi); }
-.desde { font-size: 1.2rem; opacity: 0.9; }
-.unidad { margin-bottom: 20px; font-size: 0.9rem; }
+.monto { display: block; font-size: 3.5rem; font-weight: bold; color: var(--amarillo-lavandi); line-height: 1; }
 
 .boton-accion {
-    display: inline-block;
-    padding: 12px 25px;
-    background: white;
-    color: var(--azul-lavandi);
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
+    display: inline-block; padding: 12px 25px; background: white; color: var(--azul-lavandi);
+    text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 20px;
 }
-.boton-accion:hover { background: var(--amarillo-lavandi); color: #333; }
 
-/* --- TABLA --- */
-.borde-tabla { overflow-x: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+/* Tablas */
+.borde-tabla { overflow-x: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-top: 20px; }
 .tabla-estilo-lavandi { width: 100%; border-collapse: collapse; background: white; }
-.tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 15px; text-align: left; }
-.tabla-estilo-lavandi td { border-bottom: 1px solid #ddd; padding: 15px; }
+.tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
+.tabla-estilo-lavandi td { border-bottom: 1px solid #eee; padding: 18px; }
