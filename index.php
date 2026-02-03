@@ -63,11 +63,11 @@
 
             <div class="tarjeta-servicio borde-especial">
                 <div class="contenedor-foto">
-                    <img src="img/alfombras.jpg" alt="Alfombras">
+                    <img src="img/alfombra.jpg" alt="Alfombras">
                 </div>
                 <div class="detalles-servicio">
                     <h3>Pack Alfombras</h3>
-                    <p>Limpieza profunda y desinfección total.</p>
+                    <p>Limpieza profunda y desinfección total de alfombras.</p>
                     <a href="servicios.php" class="link-mas-info">Ver Oferta →</a>
                 </div>
             </div>
