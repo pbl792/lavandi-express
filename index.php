@@ -1,43 +1,41 @@
 <?php include 'includes/header.php'; ?>
 
-<section class="bg-primary text-white text-center py-5 shadow-sm" style="background: url('img/hero-lavanderia.png') no-repeat center center; background-size: cover; min-height: 400px; display: flex; align-items: center;">
-    <div class="container" style="background: rgba(11, 17, 70, 0.5); padding: 30px; border-radius: 15px;">
-        <h1 class="display-3 fw-bold">Lavandi Express</h1>
-        <p class="lead">Cuidamos tu ropa, cuidamos tu tiempo. Calidad profesional a un clic.</p>
-        <a href="servicios.php" class="btn btn-warning btn-lg mt-3 fw-bold">Ver Servicios</a>
+<section class="pantalla-inicio">
+    <div class="caja-bienvenida">
+        <h1 class="titulo-gigante">Lavandi Express</h1>
+        <p class="texto-destacado">Cuidamos tu ropa, cuidamos tu tiempo. Calidad profesional a un clic.</p>
+        <a href="servicios.php" class="boton-amarillo">Ver Servicios</a>
     </div>
 </section>
 
-<section class="container my-5">
-    <h2 class="text-center mb-4">Nuestros Servicios Destacados</h2>
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <img src="img/lavado-seco.jpg" class="card-img-top" alt="Lavado en seco">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold text-primary">Lavado en Seco</h5>
-                    <p class="card-text">Tratamiento especial para tus prendas más delicadas.</p>
-                </div>
+<section class="contenedor">
+    <h2 class="titulo-centrado">Nuestros Servicios Destacados</h2>
+    <div class="fila-tarjetas">
+        
+        <div class="tarjeta-simple">
+            <img src="img/lavado-seco.jpg" class="foto-tarjeta" alt="Lavado en seco">
+            <div class="cuerpo-tarjeta">
+                <h3 class="nombre-servicio">Lavado en Seco</h3>
+                <p class="descripcion-corta">Tratamiento especial para tus prendas más delicadas.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <img src="img/planchado.jpg" class="card-img-top" alt="Planchado">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold text-primary">Planchado Profesional</h5>
-                    <p class="card-text">Adiós a las arrugas. Tu ropa lista para colgar.</p>
-                </div>
+
+        <div class="tarjeta-simple">
+            <img src="img/planchado.jpg" class="foto-tarjeta" alt="Planchado">
+            <div class="cuerpo-tarjeta">
+                <h3 class="nombre-servicio">Planchado Profesional</h3>
+                <p class="descripcion-corta">Adiós a las arrugas. Tu ropa lista para colgar.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-                <img src="img/servicio-domicilio.jpg" class="card-img-top" alt="A domicilio">
-                <div class="card-body text-center">
-                    <h5 class="card-title fw-bold text-primary">Servicio a Domicilio</h5>
-                    <p class="card-text">Recogemos y entregamos tu colada sin que salgas de casa.</p>
-                </div>
+
+        <div class="tarjeta-simple">
+            <img src="img/servicio-domicilio.jpg" class="foto-tarjeta" alt="A domicilio">
+            <div class="cuerpo-tarjeta">
+                <h3 class="nombre-servicio">Servicio a Domicilio</h3>
+                <p class="descripcion-corta">Recogemos y entregamos tu colada sin salir de casa.</p>
             </div>
         </div>
+
     </div>
 </section>
 
