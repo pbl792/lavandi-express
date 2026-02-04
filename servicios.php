@@ -1,8 +1,12 @@
 <?php include 'includes/header.php'; ?>
 
 <main class="contenedor seccion-padding">
-    <h2 class="centrar-texto negrita mb-5" style="font-size: 2.5rem; color: var(--azul-lavandi);">Nuestros Servicios y Tarifas</h2>
-
+    <section class="centrar-texto" style="padding: 40px 0 10px 0;">
+        <div style="padding: 0 10px;">
+            <h1 class="titulo-gigante titulo-gradiente">Nuestros Servicios y Tarifas</h1>
+        </div>
+        <div class="linea-decorativa"></div>
+    </section>
     <div class="fila-doble">
         <div class="caja-gris">
             <h3 class="negrita color-azul"><i class="bi bi-water"></i> Lavado Premium</h3>
