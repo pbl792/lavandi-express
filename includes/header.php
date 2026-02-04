@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lavadi Express | Tintorería</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">
-                <img src="img/hero-lavanderia.png" alt="Logo Lavadi Express" style="height: 40px; width: auto;">            
+                <img src="img/hero-lavanderia.png" alt="Logo Lavadi Express" style="height: 40px; width: auto; object-fit: contain;">
             </a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="index.php">Inicio</a>
-                <a class="nav-link" href="servicios.php">Servicios</a>
-                <a class="nav-link" href="contactos.php">Contacto</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.php">Inicio</a>
+                    <a class="nav-link" href="servicios.php">Servicios</a>
+                    <a class="nav-link" href="contactos.php">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
