@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-color: #2c74c2 !important;">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">
                 <img src="img/hero-lavanderia.png" alt="Logo Lavadi Express" style="height: 40px; width: auto; object-fit: contain;">
