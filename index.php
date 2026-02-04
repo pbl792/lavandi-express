@@ -3,7 +3,7 @@
 <section class="portada-principal">
     <div class="capa-oscura-portada">
         <div class="caja-texto-portada">
-            <span class="negrita">✨ Tu lavandería de confianza en Alcobendas</span>
+            <span class="negrita">Tu lavandería de confianza en Alcobendas</span>
             <h1 class="titulo-enorme">Ropa impecable,<br><span class="resaltado-amarillo">sin mover un dedo.</span></h1>
             <p>Recogemos tu colada a domicilio y te la entregamos limpia, seca y doblada en 24h.</p>
             <div class="grupo-botones">
@@ -58,7 +58,7 @@
                 <div class="contenedor-foto"><img src="img/alfombra.jpg" alt="Alfombras"></div>
                 <div class="detalles-servicio">
                     <h3>Pack Alfombras</h3>
-                    <p>Limpieza profunda y desinfección total.</p>
+                    <p>Limpieza profunda y desinfección total de alfombras.</p>
                     <a href="servicios.php" class="link-mas-info">Ver Oferta →</a>
                 </div>
             </div>
