@@ -38,16 +38,14 @@ body {
     margin-left: 20px;
     transition: color 0.3s ease;
 }
-/* Efecto hover en naranja para dar feedback */
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: var(--amarillo-lavandi) !important;
+    color: var(--blanco) !important;
 }
 
-/* --- PORTADA (INDEX) - CENTRADO TOTAL --- */
+/* --- PORTADA (INDEX) --- */
 .portada-principal {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/hero-lavanderia.png') no-repeat center;
-    background-size: cover;
-    height: 60vh; /* Altura aumentada para mejor impacto visual */
+    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('../img/hero-lavanderia.png') no-repeat center;
+    height: 35vh;
     display: flex;
 }
 
@@ -55,9 +53,9 @@ body {
     background: rgba(11, 17, 70, 0.65);
     width: 100%;
     display: flex;
-    align-items: center;    /* Centrado Vertical */
-    justify-content: center; /* Centrado Horizontal */
-    text-align: center;      /* Centrado de Texto */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .caja-texto-portada { 
@@ -65,7 +63,6 @@ body {
     padding: 20px; 
     color: var(--blanco); 
 }
-
 .titulo-enorme { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
 .resaltado-amarillo { color: var(--amarillo-lavandi); }
 
@@ -74,9 +71,8 @@ body {
     display: flex; 
     gap: 15px; 
     margin-top: 30px; 
-    justify-content: center; /* Centra los botones */
+    justify-content: center; 
 }
-
 .boton-azul-relleno, .boton-accion { 
     background: var(--azul-lavandi); color: white; padding: 14px 30px; 
     border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; 
@@ -97,7 +93,6 @@ body {
     border-radius: 50%; display: flex; align-items: center; justify-content: center; 
     font-size: 2.5rem; margin: 0 auto 20px; 
 }
-
 .seccion-gris-claro { background: var(--fondo-gris); padding: 80px 0; }
 .rejilla-servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 .tarjeta-servicio { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -117,8 +112,6 @@ body {
     border-radius: 20px; text-align: center; flex: 1; min-width: 220px;
 }
 .monto { display: block; font-size: 3.5rem; font-weight: bold; color: var(--amarillo-lavandi); }
-
-/* --- TABLAS --- */
 .borde-tabla { overflow-x: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin: 30px 0 60px; }
 .tabla-estilo-lavandi { width: 100%; border-collapse: collapse; background: white; }
 .tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
@@ -133,6 +126,7 @@ body {
     border-radius: 50px; display: inline-block; font-weight: bold;
 }
 
+/* --- FORMULARIO --- */
 .formulario-contacto { background: var(--blanco); padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
 .input-contacto {
     width: 100%;
@@ -154,6 +148,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    
     font-weight: 800;
     display: inline-block;
     padding-right: 15px;
@@ -166,7 +161,6 @@ body {
     margin: 10px auto 20px auto;
     border-radius: 10px;
 }
-
 .badge.bg-info {
     background-color: #eef6ff !important;
     color: var(--azul-lavandi) !important;
