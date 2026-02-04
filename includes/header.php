@@ -13,7 +13,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.php">🧺 Lavadi Express</a>
+            <a class="navbar-brand fw-bold" href="index.php">
+                <img src="img/hero-lavanderia.png" alt="Logo Lavadi Express" style="height: 40px; width: auto;">            
+            </a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="index.php">Inicio</a>
                 <a class="nav-link" href="servicios.php">Servicios</a>

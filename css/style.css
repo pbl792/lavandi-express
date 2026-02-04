@@ -1,5 +1,4 @@
 /* --- VARIABLES --- */
-/* Definición de colores globales para mantener la consistencia de marca */
 :root {
     --azul-lavandi: #0056b3; /* Azul principal de los botones y acentos */
     --azul-oscuro: #0b1146; /* Tono para textos profundos o fondos oscuros */
@@ -9,11 +8,39 @@
 }
 
 /* --- GENERALES --- */
-body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; }
-.contenedor-web, .contenedor { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.titulo-centrado { text-align: center; margin-bottom: 40px; font-weight: bold; font-size: 2.5rem; }
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    line-height: 1.6; 
+    background-color: #ffffff; 
+}
+.contenedor-web, .contenedor { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    background-color: transparent;
+}
+.titulo-centrado { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    font-weight: bold; 
+    font-size: 2.5rem; 
+}
+
 .color-azul { color: var(--azul-lavandi); }
 .centrar-texto { text-align: center; }
+
+/* --- HEADER (NAVBAR) --- */
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--blanco) !important;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--blanco) !important;
+}
 
 /* --- PORTADA (INDEX) --- */
 .portada-principal {
@@ -35,7 +62,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 .titulo-enorme { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
 .resaltado-amarillo { color: var(--amarillo-lavandi); }
 
-/* Estilos para los botones de llamada a la acción */
+/* --- BOTONES --- */
 .grupo-botones { display: flex; gap: 15px; margin-top: 30px; }
 .boton-azul-relleno, .boton-accion { 
     background: var(--azul-lavandi); color: white; padding: 14px 30px; 
@@ -50,7 +77,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 .boton-azul-relleno:hover { background: #004494; transform: translateY(-2px); }
 .boton-blanco-borde:hover { background: var(--amarillo-lavandi); color: #333; }
 
-/* Sección de ventajas competitivas con iconos */
+/* --- SECCIONES Y TARJETAS --- */
 .seccion-ventajas { padding: 80px 0; }
 .lista-ventajas { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; list-style: none; padding: 0; }
 .circulo-icono { 
@@ -87,7 +114,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 .tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
 .tabla-estilo-lavandi td { padding: 18px; border-bottom: 1px solid #eee; }
 
-/* --- CONTACTO --- */
+/* --- CONTACTO Y FORMULARIO --- */
 .centrar-todo { text-align: center; padding: 100px 0; }
 .titulo-gigante { font-size: 3.5rem; margin-bottom: 10px; }
 .texto-destacado { font-size: 1.3rem; color: #666; margin-bottom: 40px; }
@@ -98,13 +125,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
 
 /* --- FORMULARIO --- */
 
-.formulario-contacto {
-    background: var(--blanco);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
+.formulario-contacto { background: var(--blanco); padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
 .input-contacto {
     width: 100%;
     padding: 12px;
@@ -114,23 +135,23 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
     font-family: inherit;
     font-size: 1rem;
 }
-
 .input-contacto:focus {
     border-color: var(--azul-lavandi);
     outline: none;
     box-shadow: 0 0 5px rgba(0, 86, 179, 0.2);
 }
-
 .titulo-gradiente {
-    background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-lavandi));
+    background: linear-gradient(90deg, var(--azul-oscuro, #003366), var(--azul-lavandi, #0056b3));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: transparent;
+    
     font-weight: 800;
     display: inline-block;
     padding-right: 15px;
     line-height: 1.3;
 }
-
 .linea-decorativa {
     width: 60px;
     height: 4px;
