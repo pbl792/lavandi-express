@@ -27,7 +27,6 @@ body {
     font-weight: bold; 
     font-size: 2.5rem; 
 }
-
 .color-azul { color: var(--azul-lavandi); }
 .centrar-texto { text-align: center; }
 
@@ -44,26 +43,25 @@ body {
 
 /* --- PORTADA (INDEX) --- */
 .portada-principal {
-    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('../img/hero-lavanderia.png') no-repeat center;
-    height: 35vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/escaparate.jpg') no-repeat center;
+    background-size: 100% auto; 
+    height: 57vh; 
     display: flex;
 }
-
 .capa-oscura-portada {
     background: rgba(11, 17, 70, 0.65);
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: center;    
+    justify-content: center; 
+    text-align: center;      
 }
-
 .caja-texto-portada { 
     max-width: 800px; 
     padding: 20px; 
     color: var(--blanco); 
 }
-.titulo-enorme { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
+.titulo-enorme { font-size: 4rem; line-height: 1; margin: 20px 0; }
 .resaltado-amarillo { color: var(--amarillo-lavandi); }
 
 /* --- BOTONES --- */
