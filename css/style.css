@@ -7,6 +7,7 @@
     --blanco: #ffffff;
 }
 
+
 /* --- GENERALES --- */
 body { 
     font-family: 'Segoe UI', Arial, sans-serif; 
@@ -30,6 +31,7 @@ body {
 .color-azul { color: var(--azul-lavandi); }
 .centrar-texto { text-align: center; }
 
+
 /* --- HEADER (NAVBAR) --- */
 .navbar {
     padding-top: 0.5rem;
@@ -45,6 +47,7 @@ body {
 .navbar-dark .navbar-nav .nav-link:hover {
     color: var(--blanco) !important;
 }
+
 
 /* --- PORTADA (INDEX) --- */
 .portada-principal {
@@ -69,6 +72,7 @@ body {
 .titulo-enorme { font-size: 4rem; line-height: 1; margin: 20px 0; }
 .resaltado-amarillo { color: var(--amarillo-lavandi); }
 
+
 /* --- BOTONES --- */
 .grupo-botones { 
     display: flex; 
@@ -88,6 +92,7 @@ body {
 .boton-azul-relleno:hover { background: #004494; transform: translateY(-2px); }
 .boton-blanco-borde:hover { background: var(--amarillo-lavandi); color: #333; }
 
+
 /* --- SECCIONES Y TARJETAS --- */
 .seccion-ventajas { padding: 80px 0; }
 .lista-ventajas { display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px; list-style: none; padding: 0; }
@@ -101,6 +106,47 @@ body {
 .tarjeta-servicio { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 .contenedor-foto img { width: 100%; height: 230px; object-fit: cover; }
 .detalles-servicio { padding: 25px; text-align: center; }
+/* --- BOTONES DE SECCIONES --- */
+.detalles-servicio a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: transparent;
+    color: var(--azul-lavandi);
+    border: 2px solid var(--azul-lavandi);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.detalles-servicio a:hover {
+    background-color: var(--azul-lavandi);
+    color: var(--blanco) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
+}
+.tarjeta-servicio:last-child .detalles-servicio a {
+    border-color: var(--amarillo-lavandi);
+    color: var(--azul-oscuro);
+}
+.tarjeta-servicio:last-child .detalles-servicio a:hover {
+    background-color: var(--amarillo-lavandi);
+    border-color: var(--amarillo-lavandi);
+    color: var(--azul-oscuro) !important;
+}
+/* --- TÍTULOS DE LAS TARJETAS --- */
+.detalles-servicio h3, 
+.detalles-servicio h4,
+.detalles-servicio .titulo-servicio { 
+    font-weight: 800;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
 
 /* --- SERVICIOS Y PACKS --- */
 .fila-doble { display: flex; gap: 20px; margin: 40px 0; flex-wrap: wrap; }
@@ -120,6 +166,7 @@ body {
 .tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
 .tabla-estilo-lavandi td { padding: 18px; border-bottom: 1px solid #eee; }
 
+
 /* --- CONTACTO Y FORMULARIO --- */
 .centrar-todo { text-align: center; padding: 100px 0; }
 .titulo-gigante { font-size: 3.5rem; margin-bottom: 10px; }
@@ -128,7 +175,6 @@ body {
     background: #e3f2fd; color: #0056b3; padding: 25px 50px;
     border-radius: 50px; display: inline-block; font-weight: bold;
 }
-
 /* --- FORMULARIO --- */
 .formulario-contacto { background: var(--blanco); padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
 .input-contacto {
