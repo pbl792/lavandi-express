@@ -31,6 +31,11 @@ body {
 .centrar-texto { text-align: center; }
 
 /* --- HEADER (NAVBAR) --- */
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-height: 80px;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: var(--blanco) !important;
     font-weight: 700;
