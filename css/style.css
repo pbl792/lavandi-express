@@ -1,5 +1,5 @@
 /* --- VARIABLES --- */
-/* Definición de colores globales para mantener la consistencia de marca */
+
 :root {
     --azul-lavandi: #0056b3; /* Azul principal de los botones y acentos */
     --azul-oscuro: #0b1146; /* Tono para textos profundos o fondos oscuros */
@@ -150,4 +150,21 @@ body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-
     text-transform: uppercase;
     letter-spacing: 1px;
     border: 1px solid #d0e7ff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--azul-lavandi) !important;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--azul-oscuro) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--azul-lavandi);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 86, 179, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
