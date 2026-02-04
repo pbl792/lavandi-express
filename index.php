@@ -65,5 +65,31 @@
         </div>
     </div>
 </section>
+<section style="padding: 60px 0; text-align: center;">
+    <div class="contenedor-web">
+        <h1 class="titulo-gigante titulo-gradiente">¿Dónde estamos?</h1>
+        <div class="linea-decorativa"></div>
+        
+        <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 30px 0;">
+            <iframe 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                loading="lazy" 
+                allowfullscreen 
+                src="https://maps.google.com/maps?q=Tintoreria%20Lavandi%20Express,%20Av.%20de%20Camilo%20Jos%C3%A9%20Cela,%205,%2028100%20Alcobendas,%20Madrid&t=&z=17&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+        </div>
 
+        <p class="negrita" style="font-size: 1.2rem; color: var(--azul-oscuro);">
+            Av. de Camilo José Cela, 5, 28100 Alcobendas, Madrid
+        </p>
+        
+        <div class="grupo-botones">
+            <a href="https://www.google.com/maps/dir//Tintoreria+Lavandi+Express,+Av.+de+Camilo+Jos%C3%A9+Cela,+5,+28100+Alcobendas,+Madrid" target="_blank" class="btn-lavandi boton-azul-relleno">
+                Cómo llegar
+            </a>
+        </div>
+    </div>
+</section>
 <?php include 'includes/footer.php'; ?>
