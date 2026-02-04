@@ -9,10 +9,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <main class="contenedor-web" style="padding: 60px 20px;">
-    <div class="centrar-texto mb-5">
-        <h1 class="titulo-gigante color-azul">Contacta con nosotros</h1>
-        <p>Estamos en Alcobendas para cuidar de tus prendas favoritas.</p>
-    </div>
+    
+    <section class="centrar-todo" style="padding: 40px 0 20px 0; text-align: center;">
+        <div class="mb-2">
+            <span class="badge rounded-pill bg-info text-dark px-3 py-2">Hablemos</span>
+        </div>
+        
+        <div style="padding: 0 10px;">
+            <h1 class="titulo-gigante titulo-gradiente" style="margin-bottom: 0;">¿Cómo podemos ayudarte?</h1>
+        </div>
+        
+        <div class="linea-decorativa"></div>
+        
+        <p class="texto-destacado mt-3">Envíanos un mensaje y te responderemos tan pronto como podamos</p>
+    </section>
 
     <div style="max-width: 600px; margin: 0 auto;">
         
