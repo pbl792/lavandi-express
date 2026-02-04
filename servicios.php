@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 
 <main class="contenedor">
-    <h1 class="titulo-centrado color-azul">Nuestros Servicios y Tarifas</h1>
+    <h2 class="titulo-seccion-tarifas">Nuestros Servicios y Tarifas</h2>
 
     <div class="fila-doble">
         <div class="caja-gris">
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <h2 class="subtitulo">Lista de Precios Detallada</h2>
+   <h3 class="lista-precios-titulo">Lista de Precios Detallada</h3>
     
     <div class="borde-tabla">
         <table class="tabla-estilo-lavandi">

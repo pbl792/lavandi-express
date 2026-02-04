@@ -165,6 +165,23 @@ body {
 .tabla-estilo-lavandi { width: 100%; border-collapse: collapse; background: white; }
 .tabla-estilo-lavandi th { background: var(--azul-lavandi); color: white; padding: 18px; text-align: left; }
 .tabla-estilo-lavandi td { padding: 18px; border-bottom: 1px solid #eee; }
+.titulo-seccion-tarifas {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--azul-lavandi);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+.lista-precios-titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--azul-lavandi);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
 
 /* --- CONTACTO Y FORMULARIO --- */
