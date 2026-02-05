@@ -7,6 +7,19 @@
     --blanco: #ffffff;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 93vh;
+    margin: 0;
+}
+main, .flex-grow-1 {
+    flex: 1 0 auto; 
+}
+footer {
+    flex-shrink: 0;
+}
+
 /* --- GENERALES --- */
 body { 
     font-family: 'Segoe UI', Arial, sans-serif; 
@@ -281,4 +294,429 @@ body {
 .input-contacto:focus {
     border-color: var(--azul-lavandi);
     outline: none;
+}
+
+
+/* --- RESPONSIVE INDEX MOVIL --- */
+@media (max-width: 576px) {
+    h1, .titulo-hero { 
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
+
+    h1 span {
+        font-size: 2rem !important;
+    }
+
+    .hero-seccion p {
+        font-size: 0.9rem !important;
+        padding: 0 15px;
+    }
+
+    /* BOTONES MOVIL */
+    .grupo-botones {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .btn-lavandi {
+        padding: 8px 15px !important;
+        font-size: 0.85rem !important;
+        width: auto !important;
+        min-width: 130px;
+        border-radius: 8px;
+    }
+
+    .navbar-brand img {
+        height: 30px;
+    }
+
+    /* SECCIÓN VENTAJAS MOVIL */
+    .seccion-ventajas {
+        padding: 30px 0 !important;
+    }
+
+    .lista-ventajas {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bloque-ventaja {
+        margin-bottom: 5px;
+    }
+
+    .circulo-icono {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 auto 8px auto !important;
+    }
+
+    .circulo-icono i {
+        font-size: 1.2rem !important;
+    }
+
+    .bloque-ventaja h4 {
+        font-size: 1rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .bloque-ventaja p {
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+    }
+
+    /* SERVICIOS TOP MOVIL */
+    .tarjeta-servicio {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        background: #fff;
+        border-radius: 15px;
+        height: 130px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .contenedor-foto {
+        width: 35% !important;
+        min-width: 120px;
+        overflow: hidden;
+    }
+
+    .contenedor-foto img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .detalles-servicio {
+        width: 65%;
+        padding: 8px 12px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left !important;
+    }
+
+    .detalles-servicio h3 {
+        font-size: 0.95rem !important;
+        margin: 0 0 2px 0 !important;
+    }
+
+    .detalles-servicio p {
+        font-size: 0.95rem !important;
+        line-height: 1;
+        margin-bottom: 6px !important;
+    }
+
+    .link-mas-info {
+        font-size: 0.7rem !important;
+        padding: 5px 12px !important;
+        border: 1.5px solid var(--azul-lavandi);
+        border-radius: 20px;
+        width: fit-content;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration: none;
+        margin-top: auto;
+    }
+    
+    /* MAPA MOVIL */
+    .titulo-gigante.titulo-gradiente {
+        font-size: 1.6rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    iframe {
+        height: 220px !important;
+        border-radius: 15px !important;
+    }
+
+    section div[style*="border-radius: 20px"] {
+        margin: 15px 0 !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important;
+    }
+
+    section p.negrita {
+        font-size: 0.9rem !important;
+        padding: 0 20px !important;
+        line-height: 1.3;
+        margin-bottom: 20px !important;
+    }
+
+    .grupo-botones .boton-azul-relleno {
+        width: 80% !important;
+        margin: 0 auto;
+        padding: 12px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* --- RESPONSIVE INDEX TABLET --- */
+@media (min-width: 577px) and (max-width: 991px) {
+
+    .caja-texto-portada span.negrita {
+        font-size: 1.4rem !important;
+        letter-spacing: 1px;
+    }
+    
+    .titulo-enorme {
+        font-size: 3.5rem !important;
+        line-height: 1.1 !important;
+        margin: 20px 0 !important;
+    }
+
+    .titulo-enorme span.resaltado-amarillo {
+        font-size: 3.8rem !important;
+    }
+
+    .caja-texto-portada p {
+        font-size: 1.3rem !important;
+        max-width: 85%;
+        margin: 0 auto 30px auto !important;
+        line-height: 1.4;
+    }
+
+    /* BOTONES TABLET */
+    .grupo-botones {
+        gap: 20px !important;
+    }
+
+    .btn-lavandi {
+        padding: 15px 30px !important;
+        font-size: 1.1rem !important;
+        min-width: 180px;
+    }
+
+    /* SECCIÓN VENTAJAS TABLET */
+    .lista-ventajas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        text-align: center;
+    }
+
+    .circulo-icono {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    /* SERVICIOS TOP TABLET */
+
+    .seccion-gris-claro {
+        padding: 50px 0 !important;
+    }
+
+    .rejilla-servicios {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 30px !important;
+        padding: 0 40px !important;
+    }
+
+    .tarjeta-servicio {
+        display: flex !important;
+        flex-direction: column !important; 
+        height: 100% !important;
+        min-height: 420px;
+        background: #fff;
+        border-radius: 20px !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05) !important;
+    }
+
+    .contenedor-foto {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .contenedor-foto img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    .detalles-servicio {
+        width: 100% !important;
+        padding: 25px !important;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center !important;
+    }
+
+    .detalles-servicio h3 {
+        font-size: 1.4rem !important;
+        margin-bottom: 10px !important;
+        color: var(--azul-lavandi);
+    }
+
+    .detalles-servicio p {
+        font-size: 1rem !important;
+        line-height: 1.4;
+        margin-bottom: 20px !important;
+        flex-grow: 1;
+    }
+
+    .link-mas-info {
+        font-size: 0.9rem !important;
+        padding: 10px 25px !important;
+        align-self: center;
+        border-width: 2px !important;
+    }
+
+    /* MAPA TABLET */
+
+    .seccion-mapa {
+        padding: 50px 0 !important;
+    }
+
+    .seccion-mapa h2 {
+        font-size: 2.2rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    section div[style*="border-radius: 20px"] {
+        max-width: 85%;
+        margin: 0 auto 25px auto !important;
+        overflow: hidden;
+    }
+
+    iframe {
+        height: 350px !important;
+        border-radius: 20px !important;
+    }
+
+    section p.negrita {
+        font-size: 1.2rem !important;
+        max-width: 70%;
+        margin: 0 auto 25px auto !important;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .grupo-botones {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    .grupo-botones .boton-azul-relleno {
+        width: auto !important;
+        min-width: 280px;
+        padding: 15px 35px !important;
+        font-size: 1.1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* --- RESPONSIVE SERVICIOS.PHP --- */
+/* MÓVIL */
+@media (max-width: 576px) {
+    
+    .pagina-servicios .tarjeta-servicio, 
+    .seccion-packs .tarjeta-servicio {
+        display: flex !important;
+        flex-direction: row !important;
+        height: auto !important;
+        min-height: 100px; 
+        max-height: 125px;
+        margin-bottom: 12px !important;
+        overflow: hidden;
+    }
+
+    .pagina-servicios .contenedor-foto,
+    .seccion-packs .contenedor-foto {
+        width: 30% !important;
+        min-width: 85px !important;
+        height: auto !important;
+    }
+
+    .pagina-servicios .detalles-servicio,
+    .seccion-packs .detalles-servicio {
+        width: 70% !important;
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pagina-servicios .detalles-servicio h3,
+    .seccion-packs .detalles-servicio h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 4px !important;
+        line-height: 1.1;
+    }
+
+    .pagina-servicios .detalles-servicio p,
+    .seccion-packs .detalles-servicio p {
+        font-size: 0.8rem !important;
+        line-height: 1.2;
+        margin-bottom: 0 !important;
+    }
+
+    .link-mas-info {
+        display: none;
+    }
+}
+
+/* TABLET */
+@media (min-width: 577px) and (max-width: 991px) {
+    .pagina-servicios .rejilla-servicios {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .pagina-servicios .tarjeta-servicio {
+        flex-direction: column !important;
+        height: auto !important;
+        min-height: 400px;
+    }
+}
+
+/* --- RESPONSIVE CONTACTO.PHP --- */
+@media (max-width: 991px) {
+    .seccion-contacto .row {
+        flex-direction: column-reverse !important; 
+        gap: 40px;
+    }
+
+    .col-formulario, .col-info-contacto {
+        width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    .seccion-contacto h2 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
+
+    .form-control {
+        padding: 12px 15px !important;
+        font-size: 1rem !important;
+        border-radius: 10px !important;
+        margin-bottom: 15px;
+    }
+
+    .btn-enviar-contacto {
+        width: 100% !important;
+        padding: 15px !important;
+        font-size: 1.1rem !important;
+        font-weight: bold;
+    }
+
+    .mapa-contacto iframe {
+        height: 250px !important;
+        border-radius: 15px;
+    }
 }
