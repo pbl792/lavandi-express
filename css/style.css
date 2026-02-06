@@ -39,8 +39,7 @@ body {
 .negrita { font-weight: bold; }
 
 /* --- HEADER (NAVBAR) --- */
-.navbar { min-height: 80px; }
-
+.navbar { min-height: 100px; }
 .navbar-dark .navbar-nav .nav-link {
     color: var(--blanco) !important;
     font-weight: 700;
