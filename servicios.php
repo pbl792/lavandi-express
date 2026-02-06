@@ -7,6 +7,7 @@
         </div>
         <div class="linea-decorativa"></div>
     </section>
+
     <div class="fila-doble">
         <div class="caja-gris">
             <h3 class="negrita color-azul"><i class="bi bi-water"></i> Lavado Premium</h3>

@@ -65,6 +65,7 @@
         </div>
     </div>
 </section>
+
 <section style="padding: 60px 0; text-align: center;">
     <div class="contenedor-web">
         <h1 class="titulo-gigante titulo-gradiente">¿Dónde estamos?</h1>
@@ -92,4 +93,5 @@
         </div>
     </div>
 </section>
+
 <?php include 'includes/footer.php'; ?>

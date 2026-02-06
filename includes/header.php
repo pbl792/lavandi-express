@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lavandi Express | Tintorería</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,8 +21,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="index.php">INICIO</a>
+                <div class="navbar-nav ms-auto"> <a class="nav-link" href="index.php">INICIO</a>
                     <a class="nav-link" href="servicios.php">SERVICIOS</a>
                     <a class="nav-link" href="contactos.php">CONTACTO</a>
                 </div>

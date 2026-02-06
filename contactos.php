@@ -1,8 +1,18 @@
 <?php include 'includes/header.php'; ?>
 
 <?php
+/* LÓGICA DE PROCESAMIENTO DEL FORMULARIO
+   Verifica si el formulario fue enviado vía POST.
+*/
 $enviado = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    /* TÉCNICA HONEYPOT (Anti-Spam Sencillo):
+       El campo 'asunto-fake' está oculto por CSS (display:none).
+       Los usuarios humanos no lo ven y no lo rellenan.
+       Los bots de spam suelen rellenar todo.
+       Si 'asunto-fake' NO está vacío, es un bot y no procesamos nada.
+       Si está vacío, procesamos el formulario (aquí simulamos éxito con $enviado = true).
+    */
     if (empty($_POST['asunto-fake'])) {
         $enviado = true;
     }
