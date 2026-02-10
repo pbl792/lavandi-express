@@ -1,4 +1,11 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+include 'includes/header.php'; 
+include 'includes/db.php'; // Conectamos a la base de datos
+
+// 1. Consultar los servicios de la base de datos
+$query = "SELECT * FROM servicios WHERE activo = 1";
+$resultado = mysqli_query($conexion, $query);
+?>
 
 <main class="contenedor seccion-padding">
     <section class="centrar-texto" style="padding: 40px 0 10px 0;">
@@ -50,9 +57,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td class="negrita">Colada Estándar</td><td>Lavado + Secado hasta 8kg.</td><td class="centrar-texto">9,00 €</td></tr>
-                <tr><td class="negrita">Edredones</td><td>Lavado especial voluminosos.</td><td class="centrar-texto">15,50 €</td></tr>
-                <tr><td class="negrita">Trajes</td><td>Limpieza en seco y planchado.</td><td class="centrar-texto">12,00 €</td></tr>
+                <?php 
+                // 2. Bucle para recorrer los servicios de la BD
+                if(mysqli_num_rows($resultado) > 0):
+                    while($row = mysqli_fetch_assoc($resultado)): 
+                ?>
+                    <tr>
+                        <td class="negrita"><?php echo $row['nombre']; ?></td>
+                        <td><?php echo $row['descripcion']; ?></td>
+                        <td class="centrar-texto"><?php echo number_format($row['precio'], 2, ',', '.'); ?> €</td>
+                    </tr>
+                <?php 
+                    endwhile; 
+                else:
+                ?>
+                    <tr>
+                        <td colspan="3" class="centrar-texto">No hay servicios disponibles actualmente.</td>
+                    </tr>
+                <?php endif; ?>
             </tbody>
         </table>
     </div>
