@@ -1,20 +1,24 @@
 <?php include 'includes/header.php'; ?>
+<?php include 'includes/db.php'; // Conexión a la BD ?>
 
 <?php
-/* LÓGICA DE PROCESAMIENTO DEL FORMULARIO
-   Verifica si el formulario fue enviado vía POST.
-*/
 $enviado = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    /* TÉCNICA HONEYPOT (Anti-Spam Sencillo):
-       El campo 'asunto-fake' está oculto por CSS (display:none).
-       Los usuarios humanos no lo ven y no lo rellenan.
-       Los bots de spam suelen rellenar todo.
-       Si 'asunto-fake' NO está vacío, es un bot y no procesamos nada.
-       Si está vacío, procesamos el formulario (aquí simulamos éxito con $enviado = true).
-    */
+    /* TÉCNICA HONEYPOT */
     if (empty($_POST['asunto-fake'])) {
-        $enviado = true;
+        
+        // PAUTA DÍA 15: Guardar mensaje en BD
+        $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
+        $email = mysqli_real_escape_string($conexion, $_POST['email']);
+        $mensaje = mysqli_real_escape_string($conexion, $_POST['mensaje']);
+        $asunto = "Consulta desde formulario Web"; // Asunto genérico para tu tabla
+
+        $query = "INSERT INTO mensajes (nombre, email, asunto, mensaje, leido) 
+                  VALUES ('$nombre', '$email', '$asunto', '$mensaje', 0)";
+        
+        if (mysqli_query($conexion, $query)) {
+            $enviado = true;
+        }
     }
 }
 ?>
@@ -56,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" id="email" name="email" class="input-contacto" required 
                        maxlength="200"
                        pattern="^[^@]+@[^@.]+\.[a-zA-Z]{2,}$" 
-                       title="Formato requerido: usuario@a.es (Debe incluir @, al menos un carácter tras ella y un dominio final como .es o .com)" 
+                       title="Formato requerido: usuario@a.es" 
                        placeholder="ejemplo@a.es">
             </div>
 
