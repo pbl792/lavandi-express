@@ -5,6 +5,7 @@ if(isset($_SESSION['admin_id'])) {
     header("Location: index.php");
     exit();
 }
+include '../includes/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
