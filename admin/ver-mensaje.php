@@ -55,7 +55,13 @@ if(!$m) {
         </div>
         <div style="margin-top: 35px; display: flex; justify-content: space-between;">
             <a href="mensajes.php" style="text-decoration: none; color: #666; font-weight: bold;"><i class="bi bi-arrow-left"></i> Volver</a>
-            <a href="mailto:<?php echo $m['email']; ?>" class="btn-lavandi boton-azul-relleno" style="text-decoration: none;"><i class="bi bi-reply-fill"></i> Responder</a>
+            
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php echo $m['email']; ?>&su=RE: <?php echo urlencode($m['asunto']); ?>&body=Hola <?php echo urlencode($m['nombre']); ?>,%0D%0A%0D%0A" 
+               target="_blank" 
+               class="btn-lavandi boton-azul-relleno" 
+               style="text-decoration: none;">
+                <i class="bi bi-reply-fill"></i> Responder en Gmail
+            </a>
         </div>
     </div>
 </body>
