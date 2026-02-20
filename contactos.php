@@ -3,21 +3,45 @@
 
 <?php
 $enviado = false;
+$errores = [];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /* TÉCNICA HONEYPOT */
     if (empty($_POST['asunto-fake'])) {
         
-        // PAUTA DÍA 15: Guardar mensaje en BD
-        $nombre = mysqli_real_escape_string($conexion, $_POST['nombre']);
-        $email = mysqli_real_escape_string($conexion, $_POST['email']);
-        $mensaje = mysqli_real_escape_string($conexion, $_POST['mensaje']);
-        $asunto = "Consulta desde formulario Web"; // Asunto genérico para tu tabla
+        // 1. Capturar y Limpiar datos (trim quita espacios en blanco)
+        $nombre = trim($_POST['nombre']);
+        $email = trim($_POST['email']);
+        $mensaje = trim($_POST['mensaje']);
+        $asunto = "Consulta desde formulario Web";
 
-        $query = "INSERT INTO mensajes (nombre, email, asunto, mensaje, leido) 
-                  VALUES ('$nombre', '$email', '$asunto', '$mensaje', 0)";
-        
-        if (mysqli_query($conexion, $query)) {
-            $enviado = true;
+        // 2. VALIDACIONES DEL SERVIDOR (Seguridad Día 17)
+        if (empty($nombre) || strlen($nombre) < 3) {
+            $errores[] = "El nombre debe tener al menos 3 caracteres.";
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errores[] = "Por favor, introduce un email válido.";
+        }
+
+        if (empty($mensaje) || strlen($mensaje) < 10) {
+            $errores[] = "El mensaje es demasiado corto (mínimo 10 caracteres).";
+        }
+
+        // 3. Si no hay errores, procedemos a guardar
+        if (empty($errores)) {
+            $nombre_db = mysqli_real_escape_string($conexion, $nombre);
+            $email_db = mysqli_real_escape_string($conexion, $email);
+            $mensaje_db = mysqli_real_escape_string($conexion, $mensaje);
+
+            $query = "INSERT INTO mensajes (nombre, email, asunto, mensaje, leido) 
+                      VALUES ('$nombre_db', '$email_db', '$asunto', '$mensaje_db', 0)";
+            
+            if (mysqli_query($conexion, $query)) {
+                $enviado = true;
+            } else {
+                $errores[] = "Error interno del servidor. Inténtalo más tarde.";
+            }
         }
     }
 }
@@ -41,6 +65,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         <?php endif; ?>
 
+        <?php if (!empty($errores)): ?>
+            <div style="background-color: #f8d7da; color: #721c24; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #f5c6cb;">
+                <ul style="margin: 0; padding-left: 20px;">
+                    <?php foreach ($errores as $error): ?>
+                        <li><?php echo $error; ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+
         <form action="contactos.php" method="POST" class="formulario-contacto">
             
             <div style="display: none;">
@@ -52,7 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" id="nombre" name="nombre" class="input-contacto" required 
                        pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,}" 
                        title="Introduce al menos 3 letras." 
-                       placeholder="Tu nombre completo">
+                       placeholder="Tu nombre completo"
+                       value="<?php echo isset($_POST['nombre']) && !$enviado ? htmlspecialchars($_POST['nombre']) : ''; ?>">
             </div>
 
             <div style="margin-bottom: 20px;">
@@ -61,13 +96,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                        maxlength="200"
                        pattern="^[^@]+@[^@.]+\.[a-zA-Z]{2,}$" 
                        title="Formato requerido: usuario@a.es" 
-                       placeholder="ejemplo@a.es">
+                       placeholder="ejemplo@a.es"
+                       value="<?php echo isset($_POST['email']) && !$enviado ? htmlspecialchars($_POST['email']) : ''; ?>">
             </div>
 
             <div style="margin-bottom: 20px;">
                 <label for="mensaje" style="display: block; font-weight: bold; margin-bottom: 5px;">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="5" class="input-contacto" required 
-                          minlength="10" placeholder="¿En qué podemos ayudarte?"></textarea>
+                          minlength="10" placeholder="¿En qué podemos ayudarte?"><?php echo isset($_POST['mensaje']) && !$enviado ? htmlspecialchars($_POST['mensaje']) : ''; ?></textarea>
             </div>
 
             <button type="submit" class="boton-azul-relleno" style="width: 100%; border: none; cursor: pointer;">
