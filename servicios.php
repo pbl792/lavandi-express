@@ -26,26 +26,6 @@ $resultado = mysqli_query($conexion, $query);
         </div>
     </div>
 
-    <section class="my-5">
-        <div class="caja-pack">
-            <div class="info-pack" style="flex: 2;">
-                <h2 class="negrita color-azul">🌟 Pack Especial Alfombras</h2>
-                <p>Limpieza profunda con tratamiento anti-ácaros. ¡Tu alfombra como nueva!</p>
-                <ul class="mt-3">
-                    <li>Recogida y entrega gratuita en Alcobendas.</li>
-                    <li>Tratamiento de manchas difíciles.</li>
-                    <li>Desinfección total.</li>
-                </ul>
-            </div>
-            <div class="precio-pack">
-                <span>Desde</span>
-                <span class="monto">25€</span>
-                <p>por unidad</p>
-                <a href="contactos.php" class="boton-reserva">Reservar Pack</a>
-            </div>
-        </div>
-    </section>
-
     <h3 class="centrar-texto negrita color-azul mb-4">Lista de Precios Detallada</h3>
     <div class="borde-tabla">
         <table class="tabla-estilo-lavandi">
